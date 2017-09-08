@@ -1,8 +1,8 @@
 class Gporca < Formula
-  desc "A modular query optimizer for big data"
+  desc "Modular query optimizer for big data"
   homepage "https://github.com/greenplum-db/gporca"
-  url "https://github.com/greenplum-db/gporca/archive/v2.39.2.tar.gz"
-  sha256 "86c98abdcf61d1576469ac458a5f3bc0ecf66c1608e02024fd06e2aaed6b01be"
+  url "https://github.com/greenplum-db/gporca/archive/v2.42.0.tar.gz"
+  sha256 "6f5400c6d85cb383bfeed8fe134dace81761355b85da5049450984f5655be264"
 
   depends_on "ccache" => :build # orca build
   depends_on "cmake" => :build # orca build
@@ -11,8 +11,11 @@ class Gporca < Formula
   depends_on "gp-xerces" => :build # with greenplum-db patch in xml handling
 
   def install
-    system "cmake -DCMAKE_INSTALL_PREFIX=#{prefix}"
+    system "cmake", "-DCMAKE_INSTALL_PREFIX=#{prefix}"
     system "make"
     system "make", "install"
+  end
+
+  test do
   end
 end

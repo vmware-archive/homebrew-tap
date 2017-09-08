@@ -1,8 +1,8 @@
 class GreenplumDb < Formula
   desc "Greenplum Database"
   homepage "http://greenplum.org"
-  url "https://github.com/greenplum-db/gpdb/archive/5.0.0-beta.10.tar.gz"
-  sha256 "d5e5047fe193ce440b18d938e1e9884225a488e12da8a48358915c73e5cb1c58"
+  url "https://github.com/greenplum-db/gpdb/archive/5.0.0.tar.gz"
+  sha256 "2b768371c5001a50524402b650b81b60b550e02d830f28b22fc891f96384da80"
   head "https://github.com/greenplum-db/gpdb.git"
 
   depends_on "libyaml" => :build # --enable-mapreduce
